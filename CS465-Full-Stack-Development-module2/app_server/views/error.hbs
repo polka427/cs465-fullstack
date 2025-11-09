@@ -1,0 +1,9 @@
+{{> header}}
+<main class="container">
+  <h2>Error {{status}}</h2>
+  <p>{{message}}</p>
+  {{#if error.stack}}
+    <pre>{{error.stack}}</pre>
+  {{/if}}
+</main>
+{{> footer}}

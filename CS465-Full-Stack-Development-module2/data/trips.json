@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Tahiti Escape",
+    "price": 2199,
+    "nights": 7,
+    "image": "img/tahiti.jpg",
+    "description": "Tahiti Escape is included here so you can see JSON rendering."
+  },
+  {
+    "name": "Alaskan Adventure",
+    "price": 1899,
+    "nights": 5,
+    "image": "img/alaska.jpg",
+    "description": "Alaskan Adventure is included here so you can see JSON rendering."
+  }
+]
