@@ -1,0 +1,52 @@
+[
+  {
+    "code": "GAL001",
+    "name": "Galapagos Adventure",
+    "length": "7 nights",
+    "start": "2025-01-15T00:00:00.000Z",
+    "resort": "Santa Cruz Lodge",
+    "perPerson": "2499.00",
+    "image": "galapagos.jpg",
+    "description": "Explore the remarkable Galapagos Islands with guided tours and breathtaking wildlife encounters."
+  },
+  {
+    "code": "CUN101",
+    "name": "Cancun Beach Retreat",
+    "length": "5 nights",
+    "start": "2025-02-10T00:00:00.000Z",
+    "resort": "Playa Azul Resort",
+    "perPerson": "1799.00",
+    "image": "cancun.jpg",
+    "description": "Relax on pristine beaches, enjoy tropical dining experiences, and take part in fun water activities."
+  },
+  {
+    "code": "PAR202",
+    "name": "Paris City Discovery",
+    "length": "6 nights",
+    "start": "2025-03-21T00:00:00.000Z",
+    "resort": "Hotel Lumière",
+    "perPerson": "2899.00",
+    "image": "paris.jpg",
+    "description": "Experience the romance and culture of Paris with museum tours, gourmet dining, and iconic landmarks."
+  },
+  {
+    "code": "SAF303",
+    "name": "South African Safari",
+    "length": "8 nights",
+    "start": "2025-04-12T00:00:00.000Z",
+    "resort": "Kruger Eco Lodge",
+    "perPerson": "3299.00",
+    "image": "safari.jpg",
+    "description": "Embark on an unforgettable safari adventure with daily game drives and luxury wildlife accommodations."
+  },
+  {
+    "code": "TOK404",
+    "name": "Tokyo Explorer",
+    "length": "7 nights",
+    "start": "2025-05-08T00:00:00.000Z",
+    "resort": "Shibuya Grand Hotel",
+    "perPerson": "3099.00",
+    "image": "tokyo.jpg",
+    "description": "Discover the energy of Tokyo through its neon-lit streets, temples, markets, and high-tech attractions."
+  }
+]

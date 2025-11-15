@@ -1,4 +1,6 @@
 // app.js
+require('./app_server/models/db');
+
 
 const createError = require('http-errors');
 const express = require('express');
