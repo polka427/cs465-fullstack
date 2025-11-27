@@ -1,3 +1,5 @@
+require('./app_api/models/db');
+const apiRouter = require('./app_api/routes/index');
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -20,6 +22,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/api', apiRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
