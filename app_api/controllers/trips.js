@@ -25,7 +25,70 @@ const tripsFindCode = async (req, res) => {
   }
 };
 
+const tripsCreate = async (req, res) => {
+  try {
+    const trip = await Trip.create({
+      code: req.body.code,
+      name: req.body.name,
+      length: req.body.length,
+      start: req.body.start,
+      resort: req.body.resort,
+      perPerson: req.body.perPerson,
+      image: req.body.image,
+      description: req.body.description
+    });
+    return res.status(201).json(trip);
+  } catch (err) {
+    return res.status(400).json(err);
+  }
+};
+
+const tripsUpdateOne = async (req, res) => {
+  try {
+    const trip = await Trip.findOneAndUpdate(
+      { code: req.params.tripCode },
+      {
+        $set: {
+          name: req.body.name,
+          length: req.body.length,
+          start: req.body.start,
+          resort: req.body.resort,
+          perPerson: req.body.perPerson,
+          image: req.body.image,
+          description: req.body.description
+        }
+      },
+      { new: true }
+    ).exec();
+
+  if (!trip) {
+      return res.status(404).json({ message: 'Trip not found' });
+    }
+    return res.status(200).json(trip);
+  } catch (err) {
+    return res.status(400).json(err);
+  }
+};
+
+const tripsDeleteOne = async (req, res) => {
+  try {
+    const result = await Trip.findOneAndDelete({
+      code: req.params.tripCode
+    }).exec();
+
+    if (!result) {
+      return res.status(404).json({ message: 'Trip not found' });
+    }
+    return res.status(204).json(null);
+  } catch (err) {
+    return res.status(400).json(err);
+  }
+};
+
 module.exports = {
   tripsList,
-  tripsFindCode
+  tripsFindCode,
+  tripsCreate,
+  tripsUpdateOne,
+  tripsDeleteOne
 };
