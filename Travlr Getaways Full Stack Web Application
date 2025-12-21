@@ -1,0 +1,25 @@
+Architecture
+
+This project uses multiple frontend development approaches across the full stack. The initial customer facing site was built using Express with HTML templates and JavaScript, which allowed server side rendering and basic routing. This approach was effective for early development and testing but required page reloads for most interactions.
+
+In contrast, the administrative interface was developed as an Angular single page application. The SPA provides a richer user experience through client side routing, dynamic data binding, and reusable components. Unlike the Express rendered pages, Angular allows views to update without reloading the page, resulting in faster and more interactive user experiences. Using both approaches in the same project highlighted the trade offs between traditional server rendered applications and modern SPAs.
+
+The backend uses a NoSQL MongoDB database because it works well with JavaScript based applications and supports flexible, schema driven data models through Mongoose. MongoDB’s document based structure makes it easier to store and modify travel packages, users, and bookings as the application evolves without requiring complex migrations.
+
+Functionality
+
+JSON differs from JavaScript in that it is a lightweight data interchange format rather than a programming language. While JavaScript contains logic, functions, and behavior, JSON is strictly used for structured data. In this application, JSON acts as the bridge between the frontend and backend by allowing Express to send structured responses that Angular can easily parse and render.
+
+Throughout development, code was refactored multiple times to improve efficiency and maintainability. Static HTML pages were converted into templates and later into Angular components. API logic was separated into controllers and services rather than being embedded directly in routes. Reusable UI components in Angular, such as trip lists and edit forms, reduced duplicated code and made the application easier to update and extend. These improvements increased readability, reduced bugs, and supported scalability.
+
+Testing
+
+Testing in a full stack application requires validating HTTP methods, API endpoints, and security layers. GET requests were tested to ensure data retrieval worked correctly, while POST and PUT requests were used to validate data creation and updates. Postman was used extensively to test endpoints independently from the frontend.
+
+With the addition of security, testing also required validating authentication and authorization. Login endpoints were tested to confirm that valid credentials returned a JSON Web Token. Protected endpoints were then tested by attaching the token as a Bearer Token to verify that only authorized users could access or modify administrative resources. This process reinforced the importance of proper endpoint design, HTTP methods, and middleware based security.
+
+Reflection
+
+This course significantly advanced my understanding of full stack web development and strengthened my confidence working across the entire application lifecycle. I gained hands on experience designing application architecture, building RESTful APIs, implementing authentication, and developing both server rendered and SPA based frontends.
+
+The skills developed in this course, including Angular development, Express API design, MongoDB integration, and token based security, directly align with real world software development roles. Completing this project has made me more comfortable working with production style codebases and better prepared to contribute to full stack or backend focused roles. This project is a strong portfolio piece that demonstrates both technical ability and the ability to design, implement, and secure a complete web application.
